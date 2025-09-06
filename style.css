@@ -127,3 +127,48 @@ textarea {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+/* Base styles already exist above */
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+  .form-container {
+    padding: 1.5rem 1rem; /* smaller padding for small screens */
+    width: 90%;           /* make sure it doesn't overflow */
+    max-width: 100%;      /* full width on small devices */
+    border-radius: 15px;  /* slightly smaller corners */
+  }
+
+  .form-container h2 {
+    font-size: 1.5rem;   /* smaller heading */
+  }
+
+  .form-container p {
+    font-size: 0.9rem;   /* smaller paragraph text */
+  }
+
+  input, textarea {
+    font-size: 0.95rem;   /* slightly smaller text */
+    padding: 0.6rem 0.8rem;
+  }
+
+  .submit-btn {
+    font-size: 1rem;
+    padding: 0.8rem;
+    border-radius: 12px;
+  }
+
+  #backBtn {
+    font-size: 0.95rem;
+    padding: 0.5rem 1.5rem;
+  }
+}
+
+/* Optional: spinner scaling for small screens */
+@media (max-width: 480px) {
+  .spinner {
+    width: 50px;
+    height: 50px;
+    border-width: 5px;
+  }
+}
