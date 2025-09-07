@@ -15,8 +15,8 @@ html, body {
   padding: 2rem 2.5rem;
   border-radius: 20px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-  width: 95%;          /* increase from 90% */
-  max-width: 600px;    /* increase from 480px */
+  width: 95%;
+  max-width: 600px;
   text-align: center;
   border: 1px solid rgba(200, 210, 230, 0.4);
   overflow: hidden;
@@ -83,9 +83,8 @@ textarea {
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 5px 15px rgba(255,81,47,0.4);
-  margin-top: 0.5rem; /* add spacing from previous input */
+  margin-top: 0.5rem;
 }
-
 
 .submit-btn:hover {
   background: linear-gradient(90deg, #f09819, #ff512f);
@@ -115,12 +114,12 @@ textarea {
 }
 
 #backBtn {
-  padding: 0.6rem 2rem;      /* smaller size */
+  padding: 0.6rem 2rem;
   font-size: 1rem;
   border-radius: 12px;
   width: auto;
-  margin-top: 1.5rem;        /* add spacing from message */
-  display: inline-block;     /* ensure it doesn't stretch full width */
+  margin-top: 1.5rem;
+  display: inline-block;
 }
 
 @keyframes spin {
@@ -128,47 +127,60 @@ textarea {
   100% { transform: rotate(360deg); }
 }
 
-/* Base styles already exist above */
-
-/* Mobile adjustments */
-@media (max-width: 480px) {
-  .form-container {
-    padding: 1.5rem 1rem; /* smaller padding for small screens */
-    width: 90%;           /* make sure it doesn't overflow */
-    max-width: 100%;      /* full width on small devices */
-    border-radius: 15px;  /* slightly smaller corners */
-  }
-
-  .form-container h2 {
-    font-size: 1.5rem;   /* smaller heading */
-  }
-
-  .form-container p {
-    font-size: 0.9rem;   /* smaller paragraph text */
-  }
-
-  input, textarea {
-    font-size: 0.95rem;   /* slightly smaller text */
-    padding: 0.6rem 0.8rem;
-  }
-
-  .submit-btn {
-    font-size: 1rem;
-    padding: 0.8rem;
-    border-radius: 12px;
-  }
-
-  #backBtn {
-    font-size: 0.95rem;
-    padding: 0.5rem 1.5rem;
-  }
+/* -------- Analyze Screen Fixes -------- */
+#analyzeScreen .form-container {
+  width: 95%;
+  max-width: 600px;
+  padding: 2rem 2.5rem;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(200, 210, 230, 0.4);
 }
 
-/* Optional: spinner scaling for small screens */
+#analyzeScreen .spinner {
+  width: 50px;
+  height: 50px;
+  border-width: 5px;
+  margin: 1.5rem auto;
+}
+
+#analyzeScreen .message {
+  font-size: 1rem;
+  margin-top: 1rem;
+  line-height: 1.4;
+  padding: 0 0.5rem;
+}
+
+#analyzeScreen #backBtn {
+  margin-top: 1.5rem;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  width: auto;
+}
+
+/* Small screen adjustments */
 @media (max-width: 480px) {
-  .spinner {
-    width: 50px;
-    height: 50px;
-    border-width: 5px;
+  .form-container {
+    padding: 1.5rem 1.2rem;
+  }
+
+  #analyzeScreen .form-container {
+    padding: 1.5rem 1.2rem;
+  }
+
+  #analyzeScreen .spinner {
+    width: 40px;
+    height: 40px;
+    border-width: 4px;
+  }
+
+  #analyzeScreen .message {
+    font-size: 0.95rem;
+  }
+
+  #analyzeScreen #backBtn {
+    width: 100%;
+    font-size: 1rem;
   }
 }
