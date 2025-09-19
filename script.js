@@ -22,7 +22,7 @@ resumeForm.addEventListener("submit", async function(e) {
   const formData = new FormData(resumeForm);
 
   try {
-    const response = await fetch("https://lehojaf181.app.n8n.cloud/webhook/41878c95-75bb-4932-8588-4dd54221e4f8", {
+    const response = await fetch("https://test10gmail.app.n8n.cloud/webhook/hireready", {
       method: "POST",
       body: formData
     });
@@ -53,3 +53,4 @@ backBtn.addEventListener("click", () => {
   analyzeMessage.textContent = ""; // clear message
   spinner.style.display = "block";  // reset spinner visibility
 });
+
